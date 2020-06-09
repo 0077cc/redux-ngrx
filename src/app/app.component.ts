@@ -10,24 +10,18 @@ import { AppState } from './app.reducers';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
   contador: number;
 
-  constructor( private store: Store<AppState> ) {
-    
-    this.store.select('contador')
-      .subscribe( contador => this.contador = contador);
-
+  constructor(private store: Store<AppState>) {
+    this.store.select('counter').subscribe(contador => this.contador = contador);
   }
 
-  incrementar(){
-    
-    this.store.dispatch( actions.incrementar()  );
-
+  incrementar() {
+    this.store.dispatch(actions.incrementar());
   }
 
-  decrementar(){
-    this.store.dispatch(  actions.decrementar()  );
+  decrementar() {
+    this.store.dispatch(actions.decrementar());
   }
 
 }

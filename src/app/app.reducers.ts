@@ -1,5 +1,3 @@
-
-
 export interface AppState {
-    contador: number;
+    counter: number;
 }

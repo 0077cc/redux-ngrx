@@ -6,8 +6,7 @@ import { environment } from '../environments/environment';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
-import { contadorReducer } from './contador/contador.reducer';
-
+import { counterReducer } from './contador/contador.reducer';
 
 import { AppComponent } from './app.component';
 import { HijoComponent } from './contador/hijo/hijo.component';
@@ -21,7 +20,7 @@ import { NietoComponent } from './contador/nieto/nieto.component';
   ],
   imports: [
     BrowserModule,
-    StoreModule.forRoot({ contador: contadorReducer }),
+    StoreModule.forRoot({ counter: counterReducer }),
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only mode
