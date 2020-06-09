@@ -19,11 +19,11 @@ export class HijoComponent implements OnInit {
   }
 
   multiplicar() {
-    this.store.dispatch( actions.multiplicar({ numero: 2 }) );
+    this.store.dispatch(actions.multiplicar({ numero: 2 }));
   }
 
   dividir() {
-    this.store.dispatch( actions.dividir({ numero: 2 }) );
+    this.store.dispatch(actions.dividir({ numero: 2 }));
   }
 
 }

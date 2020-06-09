@@ -12,15 +12,14 @@ export class NietoComponent implements OnInit {
 
   contador: number;
 
-  constructor( private store: Store<AppState>) { }
+  constructor(private store: Store<AppState>) { }
 
   ngOnInit(): void {
-    this.store.select('counter')
-      .subscribe( contador => this.contador = contador );
+    this.store.select('counter').subscribe(contador => this.contador = contador);
   }
 
   reset() {
-    this.store.dispatch( actions.reset() );
+    this.store.dispatch(actions.reset());
   }
 
 }
